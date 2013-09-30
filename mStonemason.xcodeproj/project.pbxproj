@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3319D2A917F968580014997A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2A817F968580014997A /* Foundation.framework */; };
+		3319D2AB17F968580014997A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2AA17F968580014997A /* CoreGraphics.framework */; };
+		3319D2AD17F968580014997A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2AC17F968580014997A /* UIKit.framework */; };
+		3319D2B317F968580014997A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2B117F968580014997A /* InfoPlist.strings */; };
+		3319D2B517F968580014997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2B417F968580014997A /* main.m */; };
+		3319D2B917F968580014997A /* MStoneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2B817F968580014997A /* MStoneAppDelegate.m */; };
+		3319D2BC17F968580014997A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2BA17F968580014997A /* Main_iPhone.storyboard */; };
+		3319D2BF17F968580014997A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2BD17F968580014997A /* Main_iPad.storyboard */; };
+		3319D2C217F968580014997A /* MStoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2C117F968580014997A /* MStoneViewController.m */; };
+		3319D2C417F968580014997A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2C317F968580014997A /* Images.xcassets */; };
+		3319D2CB17F968580014997A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2CA17F968580014997A /* XCTest.framework */; };
+		3319D2CC17F968580014997A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2A817F968580014997A /* Foundation.framework */; };
+		3319D2CD17F968580014997A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2AC17F968580014997A /* UIKit.framework */; };
+		3319D2D517F968580014997A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2D317F968580014997A /* InfoPlist.strings */; };
+		3319D2D717F968580014997A /* mStonemasonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2D617F968580014997A /* mStonemasonTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3319D2CE17F968580014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D29D17F968580014997A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3319D2A417F968580014997A;
+			remoteInfo = mStonemason;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3319D2A517F968580014997A /* mStonemason.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mStonemason.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3319D2A817F968580014997A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3319D2AA17F968580014997A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3319D2AC17F968580014997A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3319D2B017F968580014997A /* mStonemason-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mStonemason-Info.plist"; sourceTree = "<group>"; };
+		3319D2B217F968580014997A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3319D2B417F968580014997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3319D2B617F968580014997A /* mStonemason-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mStonemason-Prefix.pch"; sourceTree = "<group>"; };
+		3319D2B717F968580014997A /* MStoneAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MStoneAppDelegate.h; sourceTree = "<group>"; };
+		3319D2B817F968580014997A /* MStoneAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MStoneAppDelegate.m; sourceTree = "<group>"; };
+		3319D2BB17F968580014997A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		3319D2BE17F968580014997A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3319D2C017F968580014997A /* MStoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MStoneViewController.h; sourceTree = "<group>"; };
+		3319D2C117F968580014997A /* MStoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MStoneViewController.m; sourceTree = "<group>"; };
+		3319D2C317F968580014997A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3319D2C917F968580014997A /* mStonemasonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mStonemasonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3319D2CA17F968580014997A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3319D2D217F968580014997A /* mStonemasonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mStonemasonTests-Info.plist"; sourceTree = "<group>"; };
+		3319D2D417F968580014997A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3319D2D617F968580014997A /* mStonemasonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mStonemasonTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3319D2A217F968580014997A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2AB17F968580014997A /* CoreGraphics.framework in Frameworks */,
+				3319D2AD17F968580014997A /* UIKit.framework in Frameworks */,
+				3319D2A917F968580014997A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3319D2C617F968580014997A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2CB17F968580014997A /* XCTest.framework in Frameworks */,
+				3319D2CD17F968580014997A /* UIKit.framework in Frameworks */,
+				3319D2CC17F968580014997A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3319D29C17F968580014997A = {
+			isa = PBXGroup;
+			children = (
+				3319D2AE17F968580014997A /* mStonemason */,
+				3319D2D017F968580014997A /* mStonemasonTests */,
+				3319D2A717F968580014997A /* Frameworks */,
+				3319D2A617F968580014997A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3319D2A617F968580014997A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2A517F968580014997A /* mStonemason.app */,
+				3319D2C917F968580014997A /* mStonemasonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3319D2A717F968580014997A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2A817F968580014997A /* Foundation.framework */,
+				3319D2AA17F968580014997A /* CoreGraphics.framework */,
+				3319D2AC17F968580014997A /* UIKit.framework */,
+				3319D2CA17F968580014997A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3319D2AE17F968580014997A /* mStonemason */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2B717F968580014997A /* MStoneAppDelegate.h */,
+				3319D2B817F968580014997A /* MStoneAppDelegate.m */,
+				3319D2BA17F968580014997A /* Main_iPhone.storyboard */,
+				3319D2BD17F968580014997A /* Main_iPad.storyboard */,
+				3319D2C017F968580014997A /* MStoneViewController.h */,
+				3319D2C117F968580014997A /* MStoneViewController.m */,
+				3319D2C317F968580014997A /* Images.xcassets */,
+				3319D2AF17F968580014997A /* Supporting Files */,
+			);
+			path = mStonemason;
+			sourceTree = "<group>";
+		};
+		3319D2AF17F968580014997A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2B017F968580014997A /* mStonemason-Info.plist */,
+				3319D2B117F968580014997A /* InfoPlist.strings */,
+				3319D2B417F968580014997A /* main.m */,
+				3319D2B617F968580014997A /* mStonemason-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3319D2D017F968580014997A /* mStonemasonTests */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2D617F968580014997A /* mStonemasonTests.m */,
+				3319D2D117F968580014997A /* Supporting Files */,
+			);
+			path = mStonemasonTests;
+			sourceTree = "<group>";
+		};
+		3319D2D117F968580014997A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2D217F968580014997A /* mStonemasonTests-Info.plist */,
+				3319D2D317F968580014997A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3319D2A417F968580014997A /* mStonemason */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3319D2DA17F968580014997A /* Build configuration list for PBXNativeTarget "mStonemason" */;
+			buildPhases = (
+				3319D2A117F968580014997A /* Sources */,
+				3319D2A217F968580014997A /* Frameworks */,
+				3319D2A317F968580014997A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mStonemason;
+			productName = mStonemason;
+			productReference = 3319D2A517F968580014997A /* mStonemason.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3319D2C817F968580014997A /* mStonemasonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3319D2DD17F968580014997A /* Build configuration list for PBXNativeTarget "mStonemasonTests" */;
+			buildPhases = (
+				3319D2C517F968580014997A /* Sources */,
+				3319D2C617F968580014997A /* Frameworks */,
+				3319D2C717F968580014997A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3319D2CF17F968580014997A /* PBXTargetDependency */,
+			);
+			name = mStonemasonTests;
+			productName = mStonemasonTests;
+			productReference = 3319D2C917F968580014997A /* mStonemasonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3319D29D17F968580014997A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MStone;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Myles Abbott";
+				TargetAttributes = {
+					3319D2C817F968580014997A = {
+						TestTargetID = 3319D2A417F968580014997A;
+					};
+				};
+			};
+			buildConfigurationList = 3319D2A017F968580014997A /* Build configuration list for PBXProject "mStonemason" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3319D29C17F968580014997A;
+			productRefGroup = 3319D2A617F968580014997A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3319D2A417F968580014997A /* mStonemason */,
+				3319D2C817F968580014997A /* mStonemasonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3319D2A317F968580014997A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2BF17F968580014997A /* Main_iPad.storyboard in Resources */,
+				3319D2C417F968580014997A /* Images.xcassets in Resources */,
+				3319D2BC17F968580014997A /* Main_iPhone.storyboard in Resources */,
+				3319D2B317F968580014997A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3319D2C717F968580014997A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2D517F968580014997A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3319D2A117F968580014997A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2B917F968580014997A /* MStoneAppDelegate.m in Sources */,
+				3319D2B517F968580014997A /* main.m in Sources */,
+				3319D2C217F968580014997A /* MStoneViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3319D2C517F968580014997A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3319D2D717F968580014997A /* mStonemasonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3319D2CF17F968580014997A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3319D2A417F968580014997A /* mStonemason */;
+			targetProxy = 3319D2CE17F968580014997A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3319D2B117F968580014997A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3319D2B217F968580014997A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3319D2BA17F968580014997A /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3319D2BB17F968580014997A /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3319D2BD17F968580014997A /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3319D2BE17F968580014997A /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3319D2D317F968580014997A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3319D2D417F968580014997A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3319D2D817F968580014997A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3319D2D917F968580014997A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3319D2DB17F968580014997A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mStonemason/mStonemason-Prefix.pch";
+				INFOPLIST_FILE = "mStonemason/mStonemason-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3319D2DC17F968580014997A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mStonemason/mStonemason-Prefix.pch";
+				INFOPLIST_FILE = "mStonemason/mStonemason-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3319D2DE17F968580014997A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mStonemason.app/mStonemason";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mStonemason/mStonemason-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mStonemasonTests/mStonemasonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3319D2DF17F968580014997A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mStonemason.app/mStonemason";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mStonemason/mStonemason-Prefix.pch";
+				INFOPLIST_FILE = "mStonemasonTests/mStonemasonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3319D2A017F968580014997A /* Build configuration list for PBXProject "mStonemason" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3319D2D817F968580014997A /* Debug */,
+				3319D2D917F968580014997A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3319D2DA17F968580014997A /* Build configuration list for PBXNativeTarget "mStonemason" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3319D2DB17F968580014997A /* Debug */,
+				3319D2DC17F968580014997A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3319D2DD17F968580014997A /* Build configuration list for PBXNativeTarget "mStonemasonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3319D2DE17F968580014997A /* Debug */,
+				3319D2DF17F968580014997A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3319D29D17F968580014997A /* Project object */;
+}
