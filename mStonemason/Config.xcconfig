@@ -1,0 +1,8 @@
+//
+//  Copyright (c) 2013 Myles Abbott. All rights reserved.
+//
+
+
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/lib/Masonry/Masonry
+
+OTHER_LDFLAGS = -ObjC

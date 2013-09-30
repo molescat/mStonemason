@@ -22,6 +22,7 @@
 		3319D2CD17F968580014997A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2AC17F968580014997A /* UIKit.framework */; };
 		3319D2D517F968580014997A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2D317F968580014997A /* InfoPlist.strings */; };
 		3319D2D717F968580014997A /* mStonemasonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2D617F968580014997A /* mStonemasonTests.m */; };
+		3319D2F417F969FA0014997A /* libMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2EA17F969610014997A /* libMasonry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3319D2A417F968580014997A;
 			remoteInfo = mStonemason;
+		};
+		3319D2E917F969610014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD52F1AA179CA93B005CD195;
+			remoteInfo = "Masonry iOS";
+		};
+		3319D2EB17F969610014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD52F1BB179CA93B005CD195;
+			remoteInfo = "Masonry iOS Tests";
+		};
+		3319D2ED17F969610014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DDA4D6EB17C0253B0076BD87;
+			remoteInfo = "Masonry Mac";
+		};
+		3319D2EF17F969610014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DDA4D70117C0253B0076BD87;
+			remoteInfo = "Masonry Mac Tests";
+		};
+		3319D2F217F969F40014997A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DD52F1A9179CA93B005CD195;
+			remoteInfo = "Masonry iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +91,8 @@
 		3319D2D217F968580014997A /* mStonemasonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mStonemasonTests-Info.plist"; sourceTree = "<group>"; };
 		3319D2D417F968580014997A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3319D2D617F968580014997A /* mStonemasonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mStonemasonTests.m; sourceTree = "<group>"; };
+		3319D2E217F969600014997A /* Masonry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry.xcodeproj; path = lib/Masonry/Masonry.xcodeproj; sourceTree = "<group>"; };
+		3319D2F117F969AC0014997A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3319D2F417F969FA0014997A /* libMasonry.a in Frameworks */,
 				3319D2AB17F968580014997A /* CoreGraphics.framework in Frameworks */,
 				3319D2AD17F968580014997A /* UIKit.framework in Frameworks */,
 				3319D2A917F968580014997A /* Foundation.framework in Frameworks */,
@@ -84,6 +123,7 @@
 		3319D29C17F968580014997A = {
 			isa = PBXGroup;
 			children = (
+				3319D2E117F969470014997A /* lib */,
 				3319D2AE17F968580014997A /* mStonemason */,
 				3319D2D017F968580014997A /* mStonemasonTests */,
 				3319D2A717F968580014997A /* Frameworks */,
@@ -130,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3319D2B017F968580014997A /* mStonemason-Info.plist */,
+				3319D2F117F969AC0014997A /* Config.xcconfig */,
 				3319D2B117F968580014997A /* InfoPlist.strings */,
 				3319D2B417F968580014997A /* main.m */,
 				3319D2B617F968580014997A /* mStonemason-Prefix.pch */,
@@ -155,6 +196,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3319D2E117F969470014997A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2E217F969600014997A /* Masonry.xcodeproj */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		3319D2E317F969600014997A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3319D2EA17F969610014997A /* libMasonry.a */,
+				3319D2EC17F969610014997A /* Masonry iOS Tests.octest */,
+				3319D2EE17F969610014997A /* Masonry.framework */,
+				3319D2F017F969610014997A /* Masonry Mac Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +229,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3319D2F317F969F40014997A /* PBXTargetDependency */,
 			);
 			name = mStonemason;
 			productName = mStonemason;
@@ -219,6 +280,12 @@
 			mainGroup = 3319D29C17F968580014997A;
 			productRefGroup = 3319D2A617F968580014997A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3319D2E317F969600014997A /* Products */;
+					ProjectRef = 3319D2E217F969600014997A /* Masonry.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3319D2A417F968580014997A /* mStonemason */,
@@ -226,6 +293,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3319D2EA17F969610014997A /* libMasonry.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMasonry.a;
+			remoteRef = 3319D2E917F969610014997A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3319D2EC17F969610014997A /* Masonry iOS Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Masonry iOS Tests.octest";
+			remoteRef = 3319D2EB17F969610014997A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3319D2EE17F969610014997A /* Masonry.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Masonry.framework;
+			remoteRef = 3319D2ED17F969610014997A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3319D2F017F969610014997A /* Masonry Mac Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Masonry Mac Tests.octest";
+			remoteRef = 3319D2EF17F969610014997A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3319D2A317F968580014997A /* Resources */ = {
@@ -276,6 +374,11 @@
 			target = 3319D2A417F968580014997A /* mStonemason */;
 			targetProxy = 3319D2CE17F968580014997A /* PBXContainerItemProxy */;
 		};
+		3319D2F317F969F40014997A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Masonry iOS";
+			targetProxy = 3319D2F217F969F40014997A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -316,6 +419,7 @@
 /* Begin XCBuildConfiguration section */
 		3319D2D817F968580014997A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3319D2F117F969AC0014997A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -356,6 +460,7 @@
 		};
 		3319D2D917F968580014997A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3319D2F117F969AC0014997A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
