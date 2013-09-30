@@ -23,6 +23,9 @@
 		3319D2D517F968580014997A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2D317F968580014997A /* InfoPlist.strings */; };
 		3319D2D717F968580014997A /* mStonemasonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D2D617F968580014997A /* mStonemasonTests.m */; };
 		3319D2F417F969FA0014997A /* libMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2EA17F969610014997A /* libMasonry.a */; };
+		3319D2F617F96BA10014997A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2F517F96BA10014997A /* CFNetwork.framework */; };
+		3319D2F817F96BB20014997A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2F717F96BB20014997A /* QuartzCore.framework */; };
+		3319D2FA17F96C070014997A /* libReveal.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2F917F96C020014997A /* libReveal.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		3319D2D617F968580014997A /* mStonemasonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mStonemasonTests.m; sourceTree = "<group>"; };
 		3319D2E217F969600014997A /* Masonry.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry.xcodeproj; path = lib/Masonry/Masonry.xcodeproj; sourceTree = "<group>"; };
 		3319D2F117F969AC0014997A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		3319D2F517F96BA10014997A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3319D2F717F96BB20014997A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3319D2F917F96C020014997A /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libReveal.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3319D2F817F96BB20014997A /* QuartzCore.framework in Frameworks */,
+				3319D2F617F96BA10014997A /* CFNetwork.framework in Frameworks */,
 				3319D2F417F969FA0014997A /* libMasonry.a in Frameworks */,
 				3319D2AB17F968580014997A /* CoreGraphics.framework in Frameworks */,
 				3319D2AD17F968580014997A /* UIKit.framework in Frameworks */,
@@ -143,6 +151,8 @@
 		3319D2A717F968580014997A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3319D2F717F96BB20014997A /* QuartzCore.framework */,
+				3319D2F517F96BA10014997A /* CFNetwork.framework */,
 				3319D2A817F968580014997A /* Foundation.framework */,
 				3319D2AA17F968580014997A /* CoreGraphics.framework */,
 				3319D2AC17F968580014997A /* UIKit.framework */,
@@ -199,6 +209,7 @@
 		3319D2E117F969470014997A /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				3319D2F917F96C020014997A /* libReveal.dylib */,
 				3319D2E217F969600014997A /* Masonry.xcodeproj */,
 			);
 			name = lib;
@@ -330,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3319D2FA17F96C070014997A /* libReveal.dylib in Resources */,
 				3319D2BF17F968580014997A /* Main_iPad.storyboard in Resources */,
 				3319D2C417F968580014997A /* Images.xcassets in Resources */,
 				3319D2BC17F968580014997A /* Main_iPhone.storyboard in Resources */,
