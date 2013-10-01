@@ -13,7 +13,10 @@
 @interface MStoneViewController ()
 @property (nonatomic, strong) UIView *redBox;
 @property (nonatomic, strong) id<MASConstraint> redConstraint;
-@property (nonatomic, assign) BOOL flipSwitch;
+@property (nonatomic, assign) BOOL flipRed;
+
+@property (nonatomic, strong) id<MASConstraint> greenConstraint;
+@property (nonatomic, assign) BOOL flipGreen;
 @end
 
 @implementation MStoneViewController
@@ -39,11 +42,6 @@ static const CGFloat kInset = 20.f;
   blueBox.backgroundColor = [UIColor blueColor];
   [superview addSubview:blueBox];
   
-  UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-  [button setTitle:@"move" forState:UIControlStateNormal];
-  [button addTarget:self action:@selector(changeConstraints) forControlEvents:UIControlEventTouchUpInside];
-  [superview addSubview:button];
-  
   id boxSize = @(50.f);
   
   [redBox mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -53,7 +51,7 @@ static const CGFloat kInset = 20.f;
   }];
   
   [greenBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(superview.mas_top).with.offset(kInset);
+    self.greenConstraint =  make.top.equalTo(superview.mas_top).with.offset(kInset);
     make.left.equalTo(redBox.mas_right).with.offset(10.f);
     make.size.equalTo(boxSize);
   }];
@@ -64,30 +62,67 @@ static const CGFloat kInset = 20.f;
     make.size.equalTo(boxSize);
   }];
   
+  [self addButtons];
+}
+
+- (void)addButtons
+{
+  UIView *superview = self.view;
+  
+  UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+  [button setTitle:@"red" forState:UIControlStateNormal];
+  [button addTarget:self action:@selector(moveRed) forControlEvents:UIControlEventTouchUpInside];
+  [superview addSubview:button];
+  
   [button mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.centerX.equalTo(superview.mas_centerX);
+    make.centerX.equalTo(superview.mas_centerX).offset(-50.f);
+    make.centerY.equalTo(superview.mas_centerY);
+  }];
+  
+  button = [UIButton buttonWithType:UIButtonTypeSystem];
+  [button setTitle:@"green" forState:UIControlStateNormal];
+  [button addTarget:self action:@selector(moveGreen) forControlEvents:UIControlEventTouchUpInside];
+  [superview addSubview:button];
+  
+  [button mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.centerX.equalTo(superview.mas_centerX).offset(50.f);
     make.centerY.equalTo(superview.mas_centerY);
   }];
 }
 
-- (void)changeConstraints
+- (void)moveRed
 {
   UIView *superview = self.view;
   
   [self.redConstraint uninstall];
+  
   [self.redBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    self.redConstraint = (self.flipSwitch)
+    self.redConstraint = (self.flipRed)
     ? make.top.equalTo(superview.mas_top).with.offset(kInset)
     : make.bottom.equalTo(superview.mas_bottom).with.offset(-kInset);
   }];
   
-  self.flipSwitch = !self.flipSwitch;
+  self.flipRed = !self.flipRed;
   
   [UIView animateWithDuration:.3f animations:^{
     [self updateViewConstraints];
     [self.view layoutIfNeeded];
   }];
 }
+
+- (void)moveGreen
+{
+  CGFloat inset = (self.flipGreen) ? kInset : kInset + 50.f;
+  self.greenConstraint.offset(inset);
+  
+  self.flipGreen = !self.flipGreen;
+  
+  [UIView animateWithDuration:.3f animations:^{
+    [self updateViewConstraints];
+    [self.view layoutIfNeeded];
+  }];
+}
+
 
 @end
 
