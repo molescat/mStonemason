@@ -44,28 +44,24 @@ static const CGFloat kInset = 20.f;
   [button addTarget:self action:@selector(changeConstraints) forControlEvents:UIControlEventTouchUpInside];
   [superview addSubview:button];
   
-  id boxHeight = @(50.f);
-  id boxWidth = @(50.f);
+  id boxSize = @(50.f);
   
   [redBox mas_makeConstraints:^(MASConstraintMaker *make) {
     self.redConstraint = make.top.equalTo(superview.mas_top).with.offset(kInset);
     make.left.equalTo(superview.mas_left).with.offset(kInset);
-    make.width.equalTo(boxWidth);
-    make.height.equalTo(boxHeight);
+    make.size.equalTo(boxSize);
   }];
   
   [greenBox mas_makeConstraints:^(MASConstraintMaker *make) {
     make.top.equalTo(superview.mas_top).with.offset(kInset);
     make.left.equalTo(redBox.mas_right).with.offset(10.f);
-    make.width.equalTo(boxWidth);
-    make.height.equalTo(boxHeight);
+    make.size.equalTo(boxSize);
   }];
   
   [blueBox mas_makeConstraints:^(MASConstraintMaker *make) {
     make.top.equalTo(superview.mas_top).with.offset(kInset);
     make.right.equalTo(superview.mas_right).with.offset(-kInset);
-    make.width.equalTo(boxWidth);
-    make.height.equalTo(boxHeight);
+    make.size.equalTo(boxSize);
   }];
   
   [button mas_makeConstraints:^(MASConstraintMaker *make) {
