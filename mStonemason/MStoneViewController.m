@@ -1,21 +1,35 @@
 //
-//  MStoneViewController.m
-//  mStonemason
-//
-//  Created by Myles Abbott on 30/09/13.
 //  Copyright (c) 2013 Myles Abbott. All rights reserved.
 //
 
 #import "MStoneViewController.h"
-
 #import "Masonry.h"
+
+@implementation UIView (MStoneMASAddition)
+- (MASLayoutConstraint *)constraintWithKey:(NSString *)key
+{
+  for (NSLayoutConstraint *constraint in self.constraints)
+  {
+    MASLayoutConstraint *masConstraint = (MASLayoutConstraint *)constraint;
+    if ([masConstraint respondsToSelector:@selector(mas_key)]
+        && [masConstraint mas_key])
+    {
+      if ([key isEqualToString:masConstraint.mas_key])
+      {
+        return masConstraint;
+      }
+    }
+  }
+  return nil;
+}
+@end
+
+#pragma mark -
 
 @interface MStoneViewController ()
 @property (nonatomic, strong) UIView *redBox;
 @property (nonatomic, strong) id<MASConstraint> redConstraint;
 @property (nonatomic, assign) BOOL flipRed;
-
-@property (nonatomic, strong) id<MASConstraint> greenConstraint;
 @property (nonatomic, assign) BOOL flipGreen;
 @end
 
@@ -51,8 +65,8 @@ static const CGFloat kInset = 20.f;
   }];
   
   [greenBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    self.greenConstraint =  make.top.equalTo(superview.mas_top).with.offset(kInset);
-    make.left.equalTo(redBox.mas_right).with.offset(10.f);
+    make.top.equalTo(superview.mas_top).with.offset(kInset).key(@"greenBox");
+    make.left.equalTo(redBox.mas_right).with.offset(kInset);
     make.size.equalTo(boxSize);
   }];
   
@@ -113,7 +127,8 @@ static const CGFloat kInset = 20.f;
 - (void)moveGreen
 {
   CGFloat inset = (self.flipGreen) ? kInset : kInset + 50.f;
-  self.greenConstraint.offset(inset);
+  
+  [self.view constraintWithKey:@"greenBox"].constant = inset;
   
   self.flipGreen = !self.flipGreen;
   
@@ -123,6 +138,4 @@ static const CGFloat kInset = 20.f;
   }];
 }
 
-
 @end
-
