@@ -34,8 +34,8 @@ You will need to copy the libReveal.dylib file across to this project folder.
 See http://revealapp.com/
 
 
-Support
--------
+Support:
+--------
 
 Not much I'm afraid. This is really an experimental playground, have fun.
 
@@ -51,7 +51,7 @@ If you have any feature requests/bug-fixes etc. feel free to help out and send a
 License:
 --------
 
-mStonemason is Copyright (c) 2011-2013 Myles Abbott and released open source
+mStonemason is Copyright (c) 2013 Myles Abbott and released open source
 under a MIT license:
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
