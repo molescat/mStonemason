@@ -4,13 +4,18 @@ mStonemason
 Twitter: [@molescat](http://twitter.com/molescat)
 
 Demonstration iOS application - Auto layout constraints playground,
-using the Masonry framework
+using the Masonry framework.
+
 * https://github.com/cloudkite/Masonry.git
 
 
 
 Features:
 ---------
+
+* Simple animation via remembered constraint
+* Simple animation via picking the constraint using key name (associated object)
+
 TBD
 
 
