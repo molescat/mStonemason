@@ -26,6 +26,7 @@
 		3319D2F617F96BA10014997A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2F517F96BA10014997A /* CFNetwork.framework */; };
 		3319D2F817F96BB20014997A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3319D2F717F96BB20014997A /* QuartzCore.framework */; };
 		3319D2FA17F96C070014997A /* libReveal.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 3319D2F917F96C020014997A /* libReveal.dylib */; };
+		682316BC180D53CC003ACBD4 /* UIView+MStoneMASAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316BB180D53CC003ACBD4 /* UIView+MStoneMASAddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		3319D2F517F96BA10014997A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3319D2F717F96BB20014997A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3319D2F917F96C020014997A /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libReveal.dylib; sourceTree = "<group>"; };
+		682316BA180D53CC003ACBD4 /* UIView+MStoneMASAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MStoneMASAddition.h"; sourceTree = "<group>"; };
+		682316BB180D53CC003ACBD4 /* UIView+MStoneMASAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MStoneMASAddition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				3319D2BD17F968580014997A /* Main_iPad.storyboard */,
 				3319D2C017F968580014997A /* MStoneViewController.h */,
 				3319D2C117F968580014997A /* MStoneViewController.m */,
+				682316BA180D53CC003ACBD4 /* UIView+MStoneMASAddition.h */,
+				682316BB180D53CC003ACBD4 /* UIView+MStoneMASAddition.m */,
 				3319D2C317F968580014997A /* Images.xcassets */,
 				3319D2AF17F968580014997A /* Supporting Files */,
 			);
@@ -364,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682316BC180D53CC003ACBD4 /* UIView+MStoneMASAddition.m in Sources */,
 				3319D2B917F968580014997A /* MStoneAppDelegate.m in Sources */,
 				3319D2B517F968580014997A /* main.m in Sources */,
 				3319D2C217F968580014997A /* MStoneViewController.m in Sources */,
