@@ -52,6 +52,7 @@ static const CGFloat kInset = 20.f;
   
   [blueBox mas_makeConstraints:^(MASConstraintMaker *make) {
     make.top.equalTo(superview.mas_top).with.offset(kInset);
+    // make.top.equalTo(redBox.mas_top);  // Relative to RedBox example
     make.right.equalTo(superview.mas_right).with.offset(-kInset);
     make.size.equalTo(boxSize);
   }];
