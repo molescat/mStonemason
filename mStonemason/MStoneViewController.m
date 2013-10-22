@@ -33,7 +33,7 @@ static const CGFloat kInset = 20.f;
   [superview addSubview:greenBox];
   
   UIView *blueBox = [[UIView alloc] initWithFrame:CGRectZero];
-  blueBox.backgroundColor = [UIColor blueColor];
+  blueBox.backgroundColor = [UIColor cyanColor];
   [superview addSubview:blueBox];
   
   id boxSize = @(50.f);
