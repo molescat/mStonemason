@@ -100,7 +100,6 @@ static const CGFloat kInset = 20.f;
   self.flipRed = !self.flipRed;
   
   [UIView animateWithDuration:.3f animations:^{
-    [self updateViewConstraints];
     [self.view layoutIfNeeded];
   }];
 }
@@ -114,7 +113,6 @@ static const CGFloat kInset = 20.f;
   self.flipGreen = !self.flipGreen;
   
   [UIView animateWithDuration:.3f animations:^{
-    [self updateViewConstraints];
     [self.view layoutIfNeeded];
   }];
 }
