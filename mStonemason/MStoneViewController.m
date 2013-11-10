@@ -15,8 +15,6 @@
 
 @implementation MStoneViewController
 
-static const CGFloat kInset = 20.f;
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -36,24 +34,25 @@ static const CGFloat kInset = 20.f;
   blueBox.backgroundColor = [UIColor cyanColor];
   [superview addSubview:blueBox];
   
+  UIView *topGuide = (UIView *)self.topLayoutGuide; // iOS7
   id boxSize = @(50.f);
   
   [redBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    self.redConstraint = make.top.equalTo(superview.mas_top).with.offset(kInset);
-    make.left.equalTo(superview.mas_left).with.offset(kInset);
+    self.redConstraint = make.top.equalTo(topGuide.mas_bottom);
+    make.left.equalTo(superview.mas_left).with.offset(20.f);
     make.size.equalTo(boxSize);
   }];
   
   [greenBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(superview.mas_top).with.offset(kInset).key(@"greenBox");
-    make.left.equalTo(redBox.mas_right).with.offset(kInset);
+    make.top.equalTo(topGuide.mas_bottom).key(@"greenBox");
+    make.centerX.equalTo(superview.mas_centerX);
     make.size.equalTo(boxSize);
   }];
   
   [blueBox mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(superview.mas_top).with.offset(kInset);
-    // make.top.equalTo(redBox.mas_top);  // Relative to RedBox example
-    make.right.equalTo(superview.mas_right).with.offset(-kInset);
+    make.top.equalTo(topGuide.mas_bottom);
+    // make.top.equalTo(redBox.mas_top);  // Relative to RedBox animation example
+    make.right.equalTo(superview.mas_right).with.offset(-20.f);
     make.size.equalTo(boxSize);
   }];
   
@@ -66,7 +65,7 @@ static const CGFloat kInset = 20.f;
   
   UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
   [button setTitle:@"red" forState:UIControlStateNormal];
-  [button addTarget:self action:@selector(moveRed) forControlEvents:UIControlEventTouchUpInside];
+  [button addTarget:self action:@selector(moveRedByRemoveInstallConstraint) forControlEvents:UIControlEventTouchUpInside];
   [superview addSubview:button];
   
   [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,7 +75,7 @@ static const CGFloat kInset = 20.f;
   
   button = [UIButton buttonWithType:UIButtonTypeSystem];
   [button setTitle:@"green" forState:UIControlStateNormal];
-  [button addTarget:self action:@selector(moveGreen) forControlEvents:UIControlEventTouchUpInside];
+  [button addTarget:self action:@selector(moveGreenByChangingContraintConstant) forControlEvents:UIControlEventTouchUpInside];
   [superview addSubview:button];
   
   [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,16 +84,18 @@ static const CGFloat kInset = 20.f;
   }];
 }
 
-- (void)moveRed
+- (void)moveRedByRemoveInstallConstraint
 {
   UIView *superview = self.view;
   
   [self.redConstraint uninstall];
   
   [self.redBox mas_makeConstraints:^(MASConstraintMaker *make) {
+    CGFloat topBarOffset = self.topLayoutGuide.length;
+
     self.redConstraint = (self.flipRed)
-    ? make.top.equalTo(superview.mas_top).with.offset(kInset)
-    : make.bottom.equalTo(superview.mas_bottom).with.offset(-kInset);
+      ? make.top.equalTo(superview.mas_top).with.offset(topBarOffset)
+      : make.bottom.equalTo(superview.mas_bottom).with.offset(-topBarOffset);
   }];
   
   self.flipRed = !self.flipRed;
@@ -104,9 +105,9 @@ static const CGFloat kInset = 20.f;
   }];
 }
 
-- (void)moveGreen
+- (void)moveGreenByChangingContraintConstant
 {
-  CGFloat inset = (self.flipGreen) ? kInset : kInset + 50.f;
+  CGFloat inset = (self.flipGreen) ? 0.f : 50.f;
   
   [self.view constraintWithKey:@"greenBox"].constant = inset;
   
