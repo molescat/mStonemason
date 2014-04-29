@@ -8,7 +8,7 @@
 
 @interface MStoneViewController ()
 @property (nonatomic, strong) UIView *redBox;
-@property (nonatomic, strong) id<MASConstraint> redConstraint;
+@property (nonatomic, strong) MASConstraint *redConstraint;
 @property (nonatomic, assign) BOOL flipRed;
 @property (nonatomic, assign) BOOL flipGreen;
 @end
