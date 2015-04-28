@@ -40,7 +40,9 @@
   [redBox mas_makeConstraints:^(MASConstraintMaker *make) {
     self.redConstraint = make.top.equalTo(topGuide.mas_bottom);
     make.left.equalTo(superview.mas_left).with.offset(20.f);
-    make.size.equalTo(boxSize);
+//    make.size.equalTo(boxSize);
+    make.width.equalTo(superview.mas_width).dividedBy(3.f);
+    make.height.equalTo(@(44.f));
   }];
   
   [greenBox mas_makeConstraints:^(MASConstraintMaker *make) {
