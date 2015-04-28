@@ -75,7 +75,7 @@
   
   button = [UIButton buttonWithType:UIButtonTypeSystem];
   [button setTitle:@"green" forState:UIControlStateNormal];
-  [button addTarget:self action:@selector(moveGreenByChangingContraintConstant) forControlEvents:UIControlEventTouchUpInside];
+  [button addTarget:self action:@selector(moveGreenByChangingConstraintConstant) forControlEvents:UIControlEventTouchUpInside];
   [superview addSubview:button];
   
   [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,7 +105,7 @@
   }];
 }
 
-- (void)moveGreenByChangingContraintConstant
+- (void)moveGreenByChangingConstraintConstant
 {
   CGFloat inset = (self.flipGreen) ? 0.f : 50.f;
   
