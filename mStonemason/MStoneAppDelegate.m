@@ -3,6 +3,7 @@
 //
 
 #import "MStoneAppDelegate.h"
+#import <dlfcn.h>
 
 @implementation MStoneAppDelegate
 
@@ -14,7 +15,6 @@
 							
 #pragma mark - Reveal
 
-#import <dlfcn.h>
 - (void)startReveal
 {
   NSString *revealLibName = @"libReveal";
@@ -38,6 +38,5 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:self];
   }
 }
-
 
 @end
