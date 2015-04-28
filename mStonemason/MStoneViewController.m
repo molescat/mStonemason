@@ -100,7 +100,7 @@
   
   self.flipRed = !self.flipRed;
   
-  [UIView animateWithDuration:.3f animations:^{
+  [UIView animateWithDuration:.5f animations:^{
     [self.view layoutIfNeeded];
   }];
 }
@@ -113,7 +113,7 @@
   
   self.flipGreen = !self.flipGreen;
   
-  [UIView animateWithDuration:.3f animations:^{
+  [UIView animateWithDuration:.5f animations:^{
     [self.view layoutIfNeeded];
   }];
 }
